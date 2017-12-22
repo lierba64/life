@@ -1,0 +1,65 @@
+{
+    "name": "planInvest",
+    "description":"Home plan invest flow",
+    "package":"com.kari.home.invest",
+    "apiSet" : { 
+        "dev-host":"http://dev.baidu.com",
+        "demo-host":"http://demo.baidu.com",
+        "prod-host":"http://www.baidu.com",
+        "api": [
+                {
+                    "apiUrl": "/home/invest",
+                    "param": [
+                        {"name":"userId", "type":"int"},
+                        {"name":"phoneNo", "type":"string"}
+                    ],
+                    "result": {
+
+                    }
+                },
+                {
+                    "dev-host":"http://dev.baidu.com",
+                    "demo-host":"http://demo.baidu.com",
+                    "prod-host":"http://www.baidu.com",
+
+                    "apiUrl":"/home/checkLogin",
+                    "param": {
+
+                    },
+                    "result":{
+
+                    }
+                }
+        ]
+    },
+
+    "flow":[
+        {
+            "seq":1,
+            "onApiError":"onApiError",
+            "onApiSuccess":"onApiSuccess",
+            "onDispach": "onDispatch",
+            "jumpMap":{
+                "branchCount": 2,
+                "map":[
+                    {"value":0, "target":2},
+                    {"value":1, "target":3}
+                ]
+            }
+        },
+        {
+            "seq":2,
+            "onApiError":"onApiError",
+            "onApiSuccess":"onApiSuccess",
+            "onDispach": "onDispatch",
+            "jumpMap":{
+                "branchCount": 3,
+                "map":[
+                    {"value":0, "target":4},
+                    {"value":1, "target":5},
+                    {"value":2, "target":6}
+                ]
+            }
+        }    
+    ]
+}
