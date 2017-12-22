@@ -18,7 +18,9 @@ typedef unsigned char bool;
 #define PLATFORM_ANDROID 1
 #define PLATFORM_IOS 2
 
-typedef Context Context;
+typedef struct Node Node;
+typedef struct Flow Flow;
+typedef struct Context Context;
 
 extern int takePlatform(const char *platform);
 extern bool checkPlatform(int platform);
