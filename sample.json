@@ -8,6 +8,7 @@
         "prod-host":"http://www.baidu.com",
         "api": [
                 {
+                    "id":1,
                     "apiUrl": "/home/invest",
                     "param": [
                         {"name":"userId", "type":"int"},
@@ -18,9 +19,10 @@
                     }
                 },
                 {
-                    "dev-host":"http://dev.baidu.com",
-                    "demo-host":"http://demo.baidu.com",
-                    "prod-host":"http://www.baidu.com",
+                    "id":2,
+                    "dev-host":"http://dev.google.com",
+                    "demo-host":"http://demo.google.com",
+                    "prod-host":"http://www.google.com",
 
                     "apiUrl":"/home/checkLogin",
                     "param": {
@@ -36,6 +38,7 @@
     "flow":[
         {
             "seq":1,
+            "id":1,            
             "onApiError":"onApiError",
             "onApiSuccess":"onApiSuccess",
             "onDispach": "onDispatch",
@@ -49,6 +52,7 @@
         },
         {
             "seq":2,
+            "id":2,
             "onApiError":"onApiError",
             "onApiSuccess":"onApiSuccess",
             "onDispach": "onDispatch",

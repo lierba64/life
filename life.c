@@ -30,7 +30,11 @@ void main(int argc, char* argv[]) {
         }
     }
     Context *ctx = createContext(argv[1]);
+    if (NULL == ctx) {
+        return;
+    }
     performLife(ctx, platform);
+    freeContext(ctx);
 }
 
 static void usage() {

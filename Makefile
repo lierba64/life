@@ -2,7 +2,7 @@ PROJ := life
 CC := gcc
 SRCS := $(wildcard *.c) $(wildcard cJSON/*.c)
 OBJS := $(patsubst %.c, %.o, $(SRCS))
-CFLAGS += -IcJSON -lm
+CFLAGS += -g -IcJSON -lm
 
 $(PROJ):$(OBJS)
 	$(CC) $^ $(CFLAGS) -o $@

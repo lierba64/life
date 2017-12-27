@@ -27,5 +27,6 @@ extern bool checkPlatform(int platform);
 extern bool validatePath(const char *path);
 extern Context* createContext(const char* path);
 extern void performLife(Context* cxt, int platform);
+extern void freeContext(Context* cxt);
 
 #endif
