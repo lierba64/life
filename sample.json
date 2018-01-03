@@ -44,9 +44,13 @@
             "onDispach": "onDispatch",
             "jumpMap":{
                 "branchCount": 2,
+                "branchLogic":[
+                    {"field":"content.login","value":false,"code":0},
+                    {"field":"content.login","value":true,"code":1}
+                ],
                 "map":[
-                    {"value":0, "target":2},
-                    {"value":1, "target":3}
+                    {"code":0, "target":2},
+                    {"code":1, "target":3}
                 ]
             }
         },
